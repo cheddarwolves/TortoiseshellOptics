@@ -1,0 +1,264 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	line-height: 1.4;
+	color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	line-height: 1.2;
+	color: black;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/* Header styles */
+
+header {
+	background-image: url("../images/glasses-bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 31rem;
+	color: white;
+	padding-top: 1rem;
+}
+
+/* Header, bar styles */
+
+.header-bar {
+	background-color: cadetblue;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-bar .logo {
+	display: flex;
+	align-items: center;
+}
+
+.header-bar .logo img {
+	margin: 0 1rem 0 2rem;
+	width: auto;
+	height: 1.5rem;
+}
+
+nav {
+	padding: 1rem 0;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin-right: 2rem;
+}
+
+/* Header, callout styles */
+
+.header-cta {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header-cta .callout {
+	background-color: white;
+	padding: 1.5rem 5rem;
+	position: relative;
+	top: 10rem;
+	right: -2rem;
+}
+
+/* Main section styles */
+
+/* What we do section */
+
+.items {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin: 3rem 0;
+}
+
+.items .item {
+	width: 5rem;
+	height: 8rem;
+	margin: 0 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.items .item img {
+	width: 5rem;
+	height: auto;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.items .item img.port {
+	width: 3.5rem;
+}
+
+.items .item span {
+	text-align: center;
+}
+
+/* Info section */
+
+.info {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.info #philosophy, #appointments {
+	width: 35%;
+	margin: 0 2.5% 5rem 2.5%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.info h3 {
+	font-size: 1rem;
+	color: white;
+	background-color: cadetblue;
+	padding: 0.5rem 1.25rem;
+	width: 12.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Footer */
+
+footer {
+	background-color: azure;
+	padding: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+footer img {
+	margin: 0 1rem 0 0;
+	width: auto;
+	height: 1.5rem;
+}
+
+/* Media queries */
+
+/* Header-bar with nav breakpoint */
+
+@media only screen and (min-width: 721px) {
+	.hide-lg {
+		display: none;
+	}
+}
+
+/* Rest of the site */
+
+/* Rules up to 960px */
+@media only screen and (max-width: 960px) {
+	header {
+		padding-top: 0;
+		height: 22rem;
+	}
+
+	.header-cta .callout {
+		padding: 0.75rem 4rem;
+		top: 5rem;
+		right: 2rem;
+	}
+
+	h1 {
+		font-size: 1.33rem;
+	}
+}
+
+/* Rules up to 720px */
+@media only screen and (max-width: 720px) {
+	.hide-sm {
+		display: none;
+	}
+
+	header {
+		height: 17rem;
+		background-position: 20%;
+	}
+
+	.header-cta .callout {
+		padding: 1rem;
+		top: 9rem;
+		right: 0;
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	.items, .info {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.items .item {
+		margin: 0.77rem 0;
+		height: auto;
+	}
+
+	.item span {
+		font-size: 0.77rem;
+	}
+
+	.info #philosophy, #appointments {
+		width: 100%;
+		margin: 0 0 4rem 0;
+		align-items: center;
+	}
+
+	.info h3 {
+		width: 100%;
+		text-align: center;
+	}
+
+	.info p {
+		font-size: 0.77rem;
+		max-width: 32em;
+		margin: 0 0.5rem;
+	}
+
+	footer {
+		justify-content: center;
+	}
+
+	footer img {
+		margin: 0;
+	}
+
+	footer span {
+		display: none;
+	}
+
+}
